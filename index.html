@@ -20,13 +20,17 @@
         h2 { color: var(--dark); margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         h3 { color: var(--accent); margin: 20px 0 10px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px; }
-        .card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; background: #fff; transition: transform 0.2s; position: relative; }
+        .card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; background: #fff; transition: transform 0.2s; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.05); }
         .card h3 { color: var(--dark); margin-top: 0; }
         .badge { background: var(--accent); color: white; padding: 3px 8px; font-size: 11px; font-weight: bold; border-radius: 3px; position: absolute; top: 15px; right: 15px; }
         .price { font-size: 22px; color: var(--accent); font-weight: bold; margin: 15px 0 5px 0; }
         .moq { font-size: 13px; color: #666; font-style: italic; margin-bottom: 15px; }
-        footer { background: #111; color: #aaa; text-align: center; padding: 25px; margin-top: 60px; font-size: 13px; border-top: 3px solid var(--primary); }
+        .order-btn { display: block; width: 100%; text-align: center; background: var(--primary); color: white; border: none; padding: 10px; border-radius: 4px; font-weight: bold; cursor: pointer; text-decoration: none; margin-top: 10px; transition: 0.2s; }
+        .order-btn:hover { background: var(--dark); }
+        footer { background: #111; color: #aaa; text-align: center; padding: 35px 25px; margin-top: 60px; font-size: 13px; border-top: 3px solid var(--primary); }
+        .payment-icons { margin-top: 15px; font-size: 11px; letter-spacing: 2px; color: #666; font-weight: bold; }
+        .payment-icons span { border: 1px solid #333; padding: 4px 8px; border-radius: 3px; margin: 0 3px; display: inline-block; background: #1a1a1a; color: #ccc; }
         .legal-box { background: #f8f9fa; padding: 20px; border-left: 4px solid var(--primary); margin-bottom: 25px; border-radius: 0 4px 4px 0; }
         .legal-box p { margin-bottom: 10px; }
         .legal-box p:last-child { margin-bottom: 0; }
@@ -58,25 +62,34 @@
         
         <div class="grid">
             <div class="card">
-                <span class="badge">Raw / Bulk</span>
-                <h3>Raw Cow Dung Manure</h3>
-                <p>100% raw unbranded cow dung manure supplied directly from the yard. Delivered via tractor trolleys with an approximate capacity of 3 tons per trolley batch.</p>
-                <p class="price">Base Rate: ₹2,500 <span style="font-size:14px; font-weight:normal; color:#666;">/ Ton</span></p>
-                <p class="moq">Minimum Order Quantity (MOQ): 1 Tractor Trolley (~3 Tons). <br><strong>Note:</strong> Natural moisture variations (hydrated vs. dehydrated state) occur naturally; final weights are approximate.</p>
+                <div>
+                    <span class="badge">Raw / Bulk</span>
+                    <h3>Raw Cow Dung Manure</h3>
+                    <p>100% raw unbranded cow dung manure supplied directly from the yard. Delivered via tractor trolleys with an approximate capacity of 3 tons per trolley batch.</p>
+                    <p class="price">Base Rate: ₹2,500 <span style="font-size:14px; font-weight:normal; color:#666;">/ Ton</span></p>
+                    <p class="moq">Minimum Order Quantity (MOQ): 1 Tractor Trolley (~3 Tons).</p>
+                </div>
+                <button class="order-btn" onclick="initiateTokenPayment('Raw Cow Dung Manure')">Book Wholesale Lot</button>
             </div>
             <div class="card">
-                <span class="badge">Packages Available</span>
-                <h3>Premium Vermicompost</h3>
-                <p>High-quality organic compost processed via earthworms. Available in multiple pre-packed customized bag sizes for retail distribution or commercial use.</p>
-                <p class="price">Wholesale Pricing <span style="font-size:14px; font-weight:normal; color:#666;">/ Variable Pack Tiers</span></p>
-                <p class="moq">Special discounted bulk contract pricing is determined based on volume availability. Pre-booking is required to ensure a steady, continuous supply.</p>
+                <div>
+                    <span class="badge">Packages Available</span>
+                    <h3>Premium Vermicompost</h3>
+                    <p>High-quality organic compost processed via earthworms. Available in multiple pre-packed customized bag sizes for retail distribution or commercial use.</p>
+                    <p class="price">Wholesale Pricing <span style="font-size:14px; font-weight:normal; color:#666;">/ Variable Pack Tiers</span></p>
+                    <p class="moq">Special volume contract pricing determined on availability. Pre-booking mandatory.</p>
+                </div>
+                <button class="order-btn" onclick="initiateTokenPayment('Premium Vermicompost')">Book Wholesale Lot</button>
             </div>
             <div class="card">
-                <span class="badge">Wholesale</span>
-                <h3>Horticulture & Raw Harvest</h3>
-                <p>Bulk seasonal raw agricultural harvest produce and live high-yield horticulture plants grown under professional farm standards.</p>
-                <p class="price">Custom B2B Quotes <span style="font-size:14px; font-weight:normal; color:#666;">/ Based on Crop Variant</span></p>
-                <p class="moq">Open for commercial spot-purchasing and trade supply schedules.</p>
+                <div>
+                    <span class="badge">Wholesale</span>
+                    <h3>Horticulture & Raw Harvest</h3>
+                    <p>Bulk seasonal raw agricultural harvest produce and live high-yield horticulture plants grown under professional farm standards.</p>
+                    <p class="price">Custom B2B Quotes <span style="font-size:14px; font-weight:normal; color:#666;">/ Based on Crop Variant</span></p>
+                    <p class="moq">Open for commercial spot-purchasing and trade supply schedules.</p>
+                </div>
+                <button class="order-btn" onclick="initiateTokenPayment('Horticulture & Raw Harvest')">Request Commercial Quote</button>
             </div>
         </div>
     </div>
@@ -145,6 +158,14 @@
 
 <footer>
     <p>&copy; 2026 Shubham Agro. All Rights Reserved. Commercial Bulk Farm Supplies.</p>
+    <div class="payment-icons">
+        SECURE GATEWAY SETTINGS: 
+        <span>VISA</span> 
+        <span>MASTERCARD</span> 
+        <span>RUPAY</span> 
+        <span>UPI AVAILABLE</span> 
+        <span>NETBANKING</span>
+    </div>
 </footer>
 
 <script>
@@ -155,6 +176,10 @@
         for (var i = 0; i < buttons.length; i++) { buttons[i].classList.remove("active"); }
         document.getElementById(tabId).classList.add("active");
         event.currentTarget.classList.add("active");
+    }
+
+    function initiateTokenPayment(itemName) {
+        alert("Connecting to Cashfree secure checkout gateway structure to process token advance allocation order for: " + itemName + ". (Gateway integration setup in progress)");
     }
 </script>
 </body>
