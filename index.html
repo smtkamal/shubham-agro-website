@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Agro | Bulk Organic Manure & Vermicompost Suppliers</title>
+    <style>
+        :root { --primary: #3d5afe; --dark: #1a237e; --accent: #2e7d32; --light: #f5f5f5; --text: #212121; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { color: var(--text); background: #fafafa; line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--dark), var(--primary)); color: white; padding: 40px 20px; text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        nav { background: #111; display: flex; justify-content: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; }
+        nav button { background: none; border: none; color: #fff; padding: 14px 20px; cursor: pointer; font-size: 14px; transition: 0.3s; }
+        nav button:hover, nav button.active { background: var(--primary); font-weight: bold; }
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; min-height: 50vh; }
+        .tab-content { display: none; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .tab-content.active { display: block; }
+        h2 { color: var(--dark); margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h3 { color: var(--accent); margin: 20px 0 10px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px; }
+        .card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; background: #fff; transition: transform 0.2s; position: relative; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--dark); margin-top: 0; }
+        .badge { background: var(--accent); color: white; padding: 3px 8px; font-size: 11px; font-weight: bold; border-radius: 3px; position: absolute; top: 15px; right: 15px; }
+        .price { font-size: 22px; color: var(--accent); font-weight: bold; margin: 15px 0 5px 0; }
+        .moq { font-size: 13px; color: #666; font-style: italic; margin-bottom: 15px; }
+        footer { background: #111; color: #aaa; text-align: center; padding: 25px; margin-top: 60px; font-size: 13px; border-top: 3px solid var(--primary); }
+        .legal-box { background: #f8f9fa; padding: 20px; border-left: 4px solid var(--primary); margin-bottom: 25px; border-radius: 0 4px 4px 0; }
+        .legal-box p { margin-bottom: 10px; }
+        .legal-box p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shubham Agro</h1>
+    <p>Wholesale Suppliers of Raw Organic Manure, Vermicompost, and Wholesale Horticulture Crops</p>
+</header>
+
+<nav>
+    <button onclick="openTab('home')" id="defaultTab" class="active">B2B Product Catalog</button>
+    <button onclick="openTab('contact')">Contact Us</button>
+    <button onclick="openTab('terms')">Terms & Conditions</button>
+    <button onclick="openTab('privacy')">Privacy Policy</button>
+    <button onclick="openTab('shipping')">Shipping & Logistics</button>
+    <button onclick="openTab('refunds')">Refund & Cancellation</button>
+</nav>
+
+<div class="container">
+    <!-- HOME / B2B CATALOG -->
+    <div id="home" class="tab-content active">
+        <h2>Wholesale Agricultural Supplies & Bulk Commodities</h2>
+        <p>Welcome to Shubham Agro. We are a certified sole proprietorship specializing in the direct-from-farm supply of raw unbranded organic fertilizers, high-grade vermicompost, bulk horticulture products, and raw agricultural harvests for commercial farms, nurseries, and retail distributors.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <span class="badge">Bulk Raw</span>
+                <h3>Raw Dehydrated Cow Dung Manure</h3>
+                <p>100% organic, sun-dried, unbranded raw manure. Screened clean for commercial farming and soil conditioning applications.</p>
+                <p class="price">₹4,500 <span style="font-size:14px; font-weight:normal; color:#666;">/ Metric Ton</span></p>
+                <p class="moq">Minimum Order Quantity (MOQ): 5 Tons</p>
+            </div>
+            <div class="card">
+                <span class="badge">Premium</span>
+                <h3>Premium Vermicompost (Bulk)</h3>
+                <p>Nutrient-rich premium compost processed naturally using earthworms. Ideal for high-value horticulture crops and organic farming setups.</p>
+                <p class="price">₹7,500 <span style="font-size:14px; font-weight:normal; color:#666;">/ Metric Ton</span></p>
+                <p class="moq">Minimum Order Quantity (MOQ): 2 Tons</p>
+            </div>
+            <div class="card">
+                <span class="badge">Harvest</span>
+                <h3>Bulk Horticulture & Raw Harvest</h3>
+                <p>Seasonal raw agricultural produce and live horticulture saplings cultivated under strict organic field conditions.</p>
+                <p class="price">Custom Pricing <span style="font-size:14px; font-weight:normal; color:#666;">/ Based on Crop Variant</span></p>
+                <p class="moq">Available for commercial contracts and spot purchase trading.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT US -->
+    <div id="contact" class="tab-content">
+        <h2>Contact Us</h2>
+        <div class="legal-box">
+            <p><strong>Legal Entity Name:</strong> Shubham Agro (Sole Proprietorship)</p>
+            <p><strong>Registered Business Address:</strong> [Insert Your Full Physical Address Here]</p>
+            <p><strong>Primary Operations Desk Address:</strong> [Insert Your Full Physical Address Here]</p>
+            <p><strong>Customer Support Hotline:</strong> +91 [Your Phone Number]</p>
+            <p><strong>Official Business Email ID:</strong> [Your Support Email Address]</p>
+        </div>
+        <p>For custom commercial invoicing, freight estimation, logistics coordination, or payment processing validation issues, please contact our administrative desk during operating windows: Monday to Saturday, 9:00 AM to 6:00 PM.</p>
+    </div>
+
+    <!-- TERMS & CONDITIONS -->
+    <div id="terms" class="tab-content">
+        <h2>Terms and Conditions</h2>
+        <p>These terms and conditions govern the sale and distribution of wholesale organic fertilizers and raw commodities by Shubham Agro to our business clients.</p>
+        <h3>1. Commercial Ordering & Acceptance</h3>
+        <p>All orders are processed based on product availability and weight validation at our weighing bridges. By placing a bulk commercial deposit, you confirm acceptance of our product grades and raw characteristics.</p>
+        <h3>2. Wholesale Pricing Policy</h3>
+        <p>All listed product values represent baseline ex-farm wholesale rates in Indian Rupees (INR). Final item costings are fully subject to adjustments reflecting bulk weight modifications and transport variations.</p>
+        <h3>3. Payment Framework</h3>
+        <p>Commercial dispatches are approved exclusively upon successful clear receipt verification of digital token deposits or full settlement balances routed through our authorized online payment processing terminals.</p>
+    </div>
+
+    <!-- PRIVACY POLICY -->
+    <div id="privacy" class="tab-content">
+        <h2>Privacy Policy</h2>
+        <p>Shubham Agro respects user and consumer data security protocols. This policy governs how data is managed when processing trade bookings through this platform.</p>
+        <h3>1. Information Collected</h3>
+        <p>We process standard contact details including business names, GST registration entries, delivery hub postal addresses, phone contacts, and logistical metrics necessary to execute cargo dispatches.</p>
+        <h3>2. Transaction Safety</h3>
+        <p>Financial parameters processed during online invoicing are directly routed securely through certified, PCI-DSS compliant payment processing token networks. Shubham Agro never retains or stores raw banking information on our servers.</p>
+    </div>
+
+    <!-- SHIPPING & LOGISTICS -->
+    <div id="shipping" class="tab-content">
+        <h2>Shipping & Logistics Policy</h2>
+        <div class="legal-box">
+            <p><strong>Standard Order Processing Window:</strong> 3 to 5 business days from verified payment receipt.</p>
+            <p><strong>Transit Delivery Timelines:</strong> 5 to 9 business tracking days depending on site distance.</p>
+        </div>
+        <h3>Logistical Framework</h3>
+        <ul>
+            <li>Bulk commodities (Manure and Vermicompost) are transported using commercial freight trucks or open dump tippers.</li>
+            <li>Unless explicitly structured inside the invoice, final transport freight costs, toll inputs, and local village entry taxes are borne directly by the purchasing customer.</li>
+            <li>Customers must ensure adequate road access and offloading labor arrangements are present at the delivery location prior to vehicle arrival.</li>
+        </ul>
+    </div>
+
+    <!-- REFUND & CANCELLATION -->
+    <div id="refunds" class="tab-content">
+        <h2>Cancellation & Refund Policy</h2>
+        <div class="legal-box">
+            <p><strong>Cancellation Window:</strong> Strictly within 24 hours of booking or prior to vehicle loading at the yard (whichever comes first).</p>
+            <p><strong>Return Disclaimers:</strong> Raw organic items and live horticulture crops cannot be returned post-delivery due to natural exposure risks.</p>
+        </div>
+        <h3>Quality Grievances</h3>
+        <p>If moisture content or organic texture significantly deviates from specified trade standards, customers must report discrepancies with media proof *prior to offloading the vehicle* at destination. Verified claims will result in partial or total adjustments credited back to the original source account wallet within 5 to 7 business banking days.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Shubham Agro. All Rights Reserved. Commercial Organic Farm Inputs Distributed Nationally.</p>
+</footer>
+
+<script>
+    function openTab(tabId) {
+        var contents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < contents.length; i++) { contents[i].classList.remove("active"); }
+        var buttons = document.getElementsByTagName("nav")[0].getElementsByTagName("button");
+        for (var i = 0; i < buttons.length; i++) { buttons[i].classList.remove("active"); }
+        document.getElementById(tabId).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+</script>
+</body>
+</html>
